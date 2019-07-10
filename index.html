@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
@@ -24,9 +24,34 @@
         <main role="main">
             <div class="start-quiz">
                 <h1>Test your might!</h1>
-                <button type="button" class="start-quiz-button">Begin</button>
+                <h3>(hidden after button press, start quiz)</h3>
+                <button type="button" class="start-quiz-button"><a href="#">Begin</a></button>
             </div>
-            <div class="question-answer-form"></div>
+            <div class="form-container">
+            <form class="question-answer-form">
+                <ul class="question-list"><span>Question here</span>
+                    <h3>(hidden on load)</h3>
+                    <li><a href="#">Question will go here and will be selectable, need to make sure text can wrap inside of the box.</a></li>
+                    <li><a href="#">Question will go here and will be selectable, need to make sure text can wrap inside of the box.</a></li>
+                    <li><a href="#">Question will go here and will be selectable, need to make sure text can wrap inside of the box.</a></li>
+                    <li><a href="#">Question will go here and will be selectable, need to make sure text can wrap inside of the box.</a></li>
+                </ul>
+            </div>
+            <div class="question-wrong">
+                <h2>Not quite! Try again?</h2>
+                <h3>(hidden on load)</h3>
+                <button type="button" class="try-again"><a href="#">Yeah!</a></button>
+                <button type="button" class="home-button"><a href="#">Nah...</a></button>   
+            </div>
+            <div class="question-correct">
+                    <h2>Correct!</h2>
+                    <h3>(hidden on load)</h3>
+                    <button type="button" class="try-again"><a href="#">Next!</a></button>
+            </div>
+            <ul class="quiz-end-score"><span>Ending score</span>
+                <h3>(Shown at end of quiz)</h3>
+                <li>Correct answers: <span class="score">0</span></li>
+            </form>
         </main>
     </body>
 </html>

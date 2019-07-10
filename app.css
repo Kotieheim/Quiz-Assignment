@@ -44,12 +44,71 @@ header {
     padding: 20px;
 }
 
-.start-quiz-button {
+button {
     width: 150px;
     height: 60px;
     color: white;
     background-color: black;
-    margin: 50px;
+    margin: 15px 50px;
     border-radius: 6px;
     font-size: 20px;
 }
+
+/* .form-container {
+    display: flex;
+    justify-content: center;
+    color: white;
+} */
+.question-list, .question-wrong, .question-correct, .quiz-end-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    color: white;
+    /* background-color: black; */
+    margin-left: 25%;
+    margin-right: 25%;
+    color: black;
+    font-size: 40px;
+}
+
+.question-list li {
+    width: 600px;
+    margin: 15px;
+    background-color: black;
+    border-radius: 10px;
+    font-size: 15px;
+    
+}
+
+a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+/* 
+a {
+    color: white;
+} */
+
+a:hover {
+    color: black;
+    background-color: white;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+
+/* 
+.question-list li {
+    width: 500px;
+    height: 20px;
+    background-color: black;
+    color: white;
+    margin: 10px;
+    padding: 20px;
+} */
