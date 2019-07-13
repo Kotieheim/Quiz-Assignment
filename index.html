@@ -2,56 +2,43 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <title>Weight Training Quiz</title>
-        <meta name="description" content="Test your might">
+        <meta name="viewport" content="width=dive-width">
+        <title>WeightTraining Quiz</title>
+        <meta name="description" content="Weight training quiz">
         <link rel="stylesheet" href="app.css" type="text/css">
-        <!-- <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">  -->
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
-        <header role="banner">
-            <h1>Weight Training Quiz</h1>
-            <div class="quiz-logo">
-                <a href="index.html">
-                    <img class="logo" src="PinClipart.com_bodybuilders-clipart_542135.png" alt="bodybuilder icon"/>
-                </a>
-            </div>
-            <ul class="quiz-question-score">
-                <li>Question: <span class="question-number">0</span>/10</li>
-                <li>Score: <span class="score">0</span></li>
-            </ul>
+        <header>
+            <img class="dumbbell1" src="PinClipart.com_bodybuilders-clipart_542135.png">
+            <h1 class="title">Weight Training Quiz</h1>
+            <img id="dumbbell2" src="PinClipart.com_bodybuilders-clipart_542135.png">
         </header>
-        <main role="main">
-            <div class="start-quiz">
-                <h1>Test your might!</h1>
-                <h3>(hidden after button press, start quiz)</h3>
-                <button type="button" class="start-quiz-button"><a href="#">Begin</a></button>
+        <main>
+            <section id="startPage"></section>
+            <div class="container" id="questionPage">
+                <p class="status">So far: <span class="score">0</span></p>
+                <form id="quizForm">
+                    <legend>Question <span id="qNum">1</span>:</legend>
+                    <div class="quizBlock">
+                        <p id="question"></p>
+                        <input type="radio" name="answer" id="ans0" value="0" required>1)
+                        <label for="ans0">Answer 1</label>
+                        <input type="radio" name="answer" id="ans1" value="1">2)
+                        <label for="ans1">Answer 2</label>
+                        <input type="radio" name="answer" id="ans2" value="2">3)
+                        <label for="ans2">Answer 3</label>
+                        <input type="radio" name="answer" id="ans3" value="3">4)
+                        <label for="ans3">Answer 4</label>
+                        <p id="correction"></p>
+                        <button type="submit" class="button" id="submit-button">Submit!</button>
+                        <button type="button" class="button" id="next-button">Next!</button>
+                    </div>
+                </form>
             </div>
-            <div class="form-container">
-            <form class="question-answer-form">
-                <ul class="question-list"><span>Question here</span>
-                    <h3>(hidden on load)</h3>
-                    <li><a href="#">Question will go here and will be selectable, need to make sure text can wrap inside of the box.</a></li>
-                    <li><a href="#">Question will go here and will be selectable, need to make sure text can wrap inside of the box.</a></li>
-                    <li><a href="#">Question will go here and will be selectable, need to make sure text can wrap inside of the box.</a></li>
-                    <li><a href="#">Question will go here and will be selectable, need to make sure text can wrap inside of the box.</a></li>
-                </ul>
-            </div>
-            <div class="question-wrong">
-                <h2>Not quite! Try again?</h2>
-                <h3>(hidden on load)</h3>
-                <button type="button" class="try-again"><a href="#">Yeah!</a></button>
-                <button type="button" class="home-button"><a href="#">Nah...</a></button>   
-            </div>
-            <div class="question-correct">
-                    <h2>Correct!</h2>
-                    <h3>(hidden on load)</h3>
-                    <button type="button" class="try-again"><a href="#">Next!</a></button>
-            </div>
-            <ul class="quiz-end-score"><span>Ending score</span>
-                <h3>(Shown at end of quiz)</h3>
-                <li>Correct answers: <span class="score">0</span></li>
-            </form>
+            <div id="finalScore"></div>
         </main>
     </body>
+    <script src="index.js"></script>
 </html>
